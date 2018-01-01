@@ -2,7 +2,8 @@
   <article>
     <header>
       <address><strong><%= comment.commenter %></strong> says...</address>
-      <time><%= I18n.l comment.insert_dttm, format: :long %></time>
+      <!-- <time><%= I18n.l comment.insert_dttm, format: :long %></time> -->
+      <%= local_time(comment.insert_dttm) %>
     </header>
     <div class="comcont">
       <p><%= comment.body %></p>
