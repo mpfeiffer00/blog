@@ -1,0 +1,16 @@
+<ul>
+  <li>
+    <article>
+      <header>
+        <address>By <%= comment.commenter %></address>
+        <time datetime="2045-04-06T08:15+00:00">Friday, 6<sup>th</sup> April 2045 @08:15:00</time>
+      </header>
+      <div class="comcont">
+        <p><%= comment.body %></p>
+      </div>
+      <p> <%= link_to 'Destroy Comment', [comment.article, comment],
+                   method: :delete,
+                   data: { confirm: 'Are you sure?' } %> </p>
+    </article>
+  </li>
+</ul>
