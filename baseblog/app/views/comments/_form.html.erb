@@ -1,13 +1,13 @@
 <%= form_with(model: [ @article, @article.comments.build ]) do |form| %>
-  <p>
-    <%= form.label :commenter %><br>
+  <div class="one_third first">
+    <label for="name">Name <span>*</span></label>
     <%= form.text_field :commenter %>
-  </p>
-  <p>
-    <%= form.label :body %><br>
+  </div>
+  <div class="block clear">
+    <label for="comment">Your Comment</label>
     <%= form.text_area :body %>
-  </p>
-  <p>
+  </div>
+  <div>
     <%= form.submit %>
-  </p>
+  </div>
 <% end %>
