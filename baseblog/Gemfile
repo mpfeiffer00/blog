@@ -10,9 +10,12 @@ end
 gem 'rails', '~> 5.1.4'
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
-# https://github.com/basecamp/local_time
+# DateTime localization, https://github.com/basecamp/local_time
 gem 'local_time', '~> 2.0.0'
+# Active Record, https://github.com/mongoid/mongoid
 gem 'mongoid', '~> 6.1.0'
+# Semantic URLs, https://github.com/mongoid/mongoid-slug
+gem 'mongoid-slug', '~> 5.3.3'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
