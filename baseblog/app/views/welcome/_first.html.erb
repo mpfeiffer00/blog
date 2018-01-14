@@ -1,0 +1,51 @@
+<!-- Displays the latest 5 articles -->
+<div class="wrapper row3">
+  <main class="hoc container clear">
+    <!-- main body -->
+    <!-- ################################################################################################ -->
+    <article class="one_third first">
+      <header>
+        <!-- <p class="nospace btmspace-10 font-xs uppercase">Magna id ullamcorper</p> -->
+        <h2 class="font-x2"><%= @articles[0].title %></h2>
+      </header>
+      <p class="btmspace-30"><%= truncate(@articles[0].text, length: 90) %></p>
+      <footer><%= link_to "Read More &raquo;".html_safe, article_path(@articles[0]), :class => "btn small" %></footer>
+    </article>
+
+    <div class="two_third">
+      <ul class="nospace group services">
+        <li class="one_half first btmspace-30">
+          <article><a href="#"><i class="fa fa-database"></i></a>
+            <h6 class="heading"><%= @articles[1].title %></h6>
+            <p><%= truncate(@articles[1].text, length: 90) %></p>
+            <footer><%= link_to "Read More &raquo;".html_safe, article_path(@articles[1])%></footer>
+          </article>
+        </li>
+        <li class="one_half btmspace-30">
+          <article><a href="#"><i class="fa fa-language"></i></a>
+            <h6 class="heading"><%= @articles[2].title %></h6>
+            <p><%= truncate(@articles[2].text, length: 90) %></p>
+            <footer><%= link_to "Read More &raquo;".html_safe, article_path(@articles[2])%></footer>
+          </article>
+        </li>
+        <li class="one_half first">
+          <article><a href="#"><i class="fa fa-lastfm"></i></a>
+            <h6 class="heading"><%= @articles[3].title %></h6>
+            <p><%= truncate(@articles[3].text, length: 90) %></p>
+            <footer><%= link_to "Read More &raquo;".html_safe, article_path(@articles[3])%></footer>
+          </article>
+        </li>
+        <li class="one_half">
+          <article><a href="#"><i class="fa fa-sliders"></i></a>
+            <h6 class="heading"><%= @articles[4].title %></h6>
+            <p><%= truncate(@articles[4].text, length: 90) %></p>
+            <footer><%= link_to "Read More &raquo;".html_safe, article_path(@articles[4]) %></footer>
+          </article>
+        </li>
+      </ul>
+    </div>
+    <!-- ################################################################################################ -->
+    <!-- / main body -->
+    <div class="clear"></div>
+  </main>
+</div>
