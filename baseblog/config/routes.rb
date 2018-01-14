@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
   get 'welcome/index'
-  
+  get 'baking', to: 'baking#index'
+
   resources :articles do
     resources :comments
   end
