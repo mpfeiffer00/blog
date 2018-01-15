@@ -1,0 +1,51 @@
+<div class="wrapper">
+  <div class="split clear" style="background-image:url('/demo/backgrounds/01.png');">
+    <div class="box">
+      <div class="group right">
+        <% if @tea_articles[1] != nil %>
+          <article class="btmspace-50">
+            <p><%= link_to @tea_articles[1].title, article_path(@tea_articles[1]), :class => "font-x1" %></p>
+            <p class="nospace"><%=truncate(@tea_articles[1].text, length: 90) %></p>
+          </article>
+        <% else %>
+          <article class="btmspace-50">
+            <h4 class="font-x1"><a href="#">Mattis massa tellus eget</a></h4>
+            <p class="nospace">Magna varius posuere sed porttitor orci ut velit feugiat facilisis nam vitae sem tempus nisi sodales luctus vel in ligula phasellus ullamcorper varius&hellip;</p>
+          </article>
+        <% end %>
+
+        <% if @tea_articles[2] != nil %>
+          <article class="btmspace-50">
+            <h4 class="font-x1"><a href="#">Lobortis ipsum tempor</a></h4>
+            <p class="nospace"><%= truncate(@tea_articles[2].text, length: 90) %></p>
+          </article>
+        <% else %>
+          <article class="btmspace-50">
+            <h4 class="font-x1"><a href="#">Lobortis ipsum tempor</a></h4>
+            <p class="nospace">Nulla tempus a morbi pharetra risus eget metus porttitor convallis integer non pellentesque dui proin feugiat fermentum fringilla ut eu velit&hellip;</p>
+          </article>
+        <% end %>
+
+        <% if @tea_articles[2] != nil %>
+          <article class="btmspace-50">
+            <h4 class="font-x1"><a href="#">Aenean facilisis nulla ut</a></h4>
+            <p class="nospace"><%=truncate(@tea_articles[3].text, length: 90) %></p>
+          </article>
+        <% else %>
+          <article>
+            <h4 class="font-x1"><a href="#">Aenean facilisis nulla ut</a></h4>
+            <p class="nospace">Augue fusce risus nulla scelerisque sed lacinia ac bibendum eu massa etiam consectetur venenatis justo id cursus maecenas luctus quam&hellip;</p>
+          </article>
+        <% end %>
+      </div>
+    </div>
+
+    <div class="box transparent">
+      <article class="inspace-50">
+        <h4 class="font-x3"><%= @tea_articles[0].title %></h4>
+        <p class="btmspace-30"><%=truncate(@tea_articles[0].text, length: 90) %></p>
+        <footer><%= link_to "Read More &raquo;".html_safe, article_path(@tea_articles[0]), :class => "btn medium" %></footer>
+      </article>
+    </div>
+  </div>
+</div>
