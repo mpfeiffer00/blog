@@ -6,6 +6,9 @@ class Article
   slug :title
   field :text, type: String
   field :category, type: String
+  field :insert_dttm, type: DateTime, default: -> {Time.now}
+  field :display_dttm, type: DateTime, default: -> {Time.now}
+
   has_many :comments, dependent: :delete
 
   validates_presence_of :title

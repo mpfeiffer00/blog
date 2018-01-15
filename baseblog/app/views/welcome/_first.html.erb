@@ -5,8 +5,8 @@
     <!-- ################################################################################################ -->
     <article class="one_third first">
       <header>
-        <!-- <p class="nospace btmspace-10 font-xs uppercase">Magna id ullamcorper</p> -->
         <h2 class="font-x2"><%= @articles[0].title %></h2>
+        <p class="nospace btmspace-10 font-xs uppercase">Posted to <%= @articles[0].category %> @ <%= local_date(@articles[0].display_dttm) %></p>
       </header>
       <p class="btmspace-30"><%= truncate(@articles[0].text, length: 90) %></p>
       <footer><%= link_to "Read More &raquo;".html_safe, article_path(@articles[0]), :class => "btn small" %></footer>
