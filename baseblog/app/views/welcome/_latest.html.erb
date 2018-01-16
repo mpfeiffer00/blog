@@ -1,0 +1,82 @@
+<!-- Displays the latest 5 articles of each category -->
+<div class="wrapper row3">
+  <main class="hoc container clear">
+    <article class="one_third first">
+      <header>
+        <h2 class="font-x2"><%= @latest_articles[0].title %></h2>
+        <p class="nospace btmspace-10 font-xs uppercase">Posted to <%= @latest_articles[0].category %> @ <%= local_date(@latest_articles[0].display_dttm) %></p>
+      </header>
+      <p class="btmspace-30"><%= truncate(@latest_articles[0].text, length: 90) %></p>
+      <footer><%= link_to "Read More &raquo;".html_safe, article_path(@latest_articles[0]), :class => "btn small" %></footer>
+    </article>
+
+    <div class="two_third">
+      <ul class="nospace group services">
+        <li class="one_half first btmspace-30">
+          <% if @latest_articles[1] != nil %>
+            <article><a href="#"><i class="fa fa-database"></i></a>
+              <h6 class="heading"><%= @latest_articles[1].title %></h6>
+              <p><%= truncate(@latest_articles[1].text, length: 90) %></p>
+              <footer><%= link_to "Read More &raquo;".html_safe, article_path(@latest_articles[1])%></footer>
+            </article>
+          <% else %>
+            <article><a href="#"><i class="fa fa-database"></i></a>
+              <h6 class="heading">Mattis massa tellus eget</h6>
+              <p>Magna varius posuere sed porttitor orci ut velit feugiat facilisis nam vitae sem tempus nisi sodales luctus vel in ligula phasellus ullamcorper varius&hellip;</p>
+              <footer><a href="#">Read More &raquo;</a></footer>
+            </article>
+          <% end %>
+        </li>
+
+        <li class="one_half btmspace-30">
+          <% if @latest_articles[2] != nil %>
+            <article><a href="#"><i class="fa fa-language"></i></a>
+              <h6 class="heading"><%= @latest_articles[2].title %></h6>
+              <p><%= truncate(@latest_articles[2].text, length: 90) %></p>
+              <footer><%= link_to "Read More &raquo;".html_safe, article_path(@latest_articles[2])%></footer>
+            </article>
+          <% else %>
+            <article><a href="#"><i class="fa fa-language"></i></a>
+              <h6 class="heading">Mattis massa tellus eget</h6>
+              <p>Magna varius posuere sed porttitor orci ut velit feugiat facilisis nam vitae sem tempus nisi sodales luctus vel in ligula phasellus ullamcorper varius&hellip;</p>
+              <footer><a href="#">Read More &raquo;</a></footer>
+            </article>
+          <% end %>
+        </li>
+
+        <li class="one_half first">
+          <% if @latest_articles[3] != nil %>
+            <article><a href="#"><i class="fa fa-lastfm"></i></a>
+              <h6 class="heading"><%= @latest_articles[3].title %></h6>
+              <p><%= truncate(@latest_articles[3].text, length: 90) %></p>
+              <footer><%= link_to "Read More &raquo;".html_safe, article_path(@latest_articles[3])%></footer>
+            </article>
+          <% else %>
+            <article><a href="#"><i class="fa fa-lastfm"></i></a>
+              <h6 class="heading">Mattis massa tellus eget</h6>
+              <p>Magna varius posuere sed porttitor orci ut velit feugiat facilisis nam vitae sem tempus nisi sodales luctus vel in ligula phasellus ullamcorper varius&hellip;</p>
+              <footer><a href="#">Read More &raquo;</a></footer>
+            </article>
+          <% end %>
+        </li>
+
+        <li class="one_half">
+          <% if @latest_articles[4] != nil %>
+            <article><a href="#"><i class="fa fa-sliders"></i></a>
+              <h6 class="heading"><%= @latest_articles[4].title %></h6>
+              <p><%= truncate(@latest_articles[4].text, length: 90) %></p>
+              <footer><%= link_to "Read More &raquo;".html_safe, article_path(@latest_articles[4]) %></footer>
+            </article>
+          <% else %>
+            <article><a href="#"><i class="fa fa-sliders"></i></a>
+              <h6 class="heading">Mattis massa tellus eget</h6>
+              <p>Magna varius posuere sed porttitor orci ut velit feugiat facilisis nam vitae...</p>
+              <footer><a href="#">Read More &raquo;</a></footer>
+            </article>
+          <% end %>
+        </li>
+      </ul>
+    </div>
+    <div class="clear"></div>
+  </main>
+</div>
