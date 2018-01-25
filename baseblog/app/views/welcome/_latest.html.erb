@@ -14,7 +14,8 @@
       <ul class="nospace group services">
         <li class="one_half first btmspace-30">
           <% if @latest_articles[1] != nil %>
-            <article><a href="#"><i class="fa fa-database"></i></a>
+            <article>
+              <a href="#"><i><%= image_tag(getIconForArticleCategory(@latest_articles[1].category), :class => "fa", :alt => @latest_articles[1].category) %></i></a>
               <h6 class="heading"><%= @latest_articles[1].title %></h6>
               <p><%= truncate(@latest_articles[1].text, length: 90) %></p>
               <footer><%= link_to "Read More &raquo;".html_safe, article_path(@latest_articles[1])%></footer>
@@ -30,7 +31,8 @@
 
         <li class="one_half btmspace-30">
           <% if @latest_articles[2] != nil %>
-            <article><a href="#"><i class="fa fa-language"></i></a>
+            <article>
+              <a href="#"><i><%= image_tag(getIconForArticleCategory(@latest_articles[2].category), :class => "fa", :alt => @latest_articles[2].category) %></i></a>
               <h6 class="heading"><%= @latest_articles[2].title %></h6>
               <p><%= truncate(@latest_articles[2].text, length: 90) %></p>
               <footer><%= link_to "Read More &raquo;".html_safe, article_path(@latest_articles[2])%></footer>
@@ -46,7 +48,8 @@
 
         <li class="one_half first">
           <% if @latest_articles[3] != nil %>
-            <article><a href="#"><i class="fa fa-lastfm"></i></a>
+            <article>
+              <a href="#"><i><%= image_tag(getIconForArticleCategory(@latest_articles[3].category), :class => "fa", :alt => @latest_articles[3].category) %></i></a>
               <h6 class="heading"><%= @latest_articles[3].title %></h6>
               <p><%= truncate(@latest_articles[3].text, length: 90) %></p>
               <footer><%= link_to "Read More &raquo;".html_safe, article_path(@latest_articles[3])%></footer>
@@ -62,7 +65,8 @@
 
         <li class="one_half">
           <% if @latest_articles[4] != nil %>
-            <article><a href="#"><i class="fa fa-sliders"></i></a>
+            <article>
+              <a href="#"><i><%= image_tag(getIconForArticleCategory(@latest_articles[4].category), :class => "fa", :alt => @latest_articles[4].category) %></i></a>
               <h6 class="heading"><%= @latest_articles[4].title %></h6>
               <p><%= truncate(@latest_articles[4].text, length: 90) %></p>
               <footer><%= link_to "Read More &raquo;".html_safe, article_path(@latest_articles[4]) %></footer>
@@ -80,3 +84,5 @@
     <div class="clear"></div>
   </main>
 </div>
+
+<script src="/assets/locator_assistant.js"></script>
