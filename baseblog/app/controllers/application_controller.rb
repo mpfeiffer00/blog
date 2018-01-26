@@ -17,6 +17,8 @@ class ApplicationController < ActionController::Base
          "/demo/icons/restaurant-32.png"
       when "whisky"
          "/demo/icons/drink-glass-with-beverage-inside-32.png"
+      when "travel"
+         "/demo/icons/traveler-with-a-suitcase-32.png"
       end
   end
 end

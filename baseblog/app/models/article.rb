@@ -20,5 +20,6 @@ class Article
     TEA = "tea",
     DRINKS = "drinks",
     COOKING = "cooking",
-    WHISKY = "whisky"]
+    WHISKY = "whisky",
+    TRAVEL = "travel"]
 end
