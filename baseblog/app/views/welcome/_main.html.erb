@@ -2,7 +2,6 @@
   <article class="introtxt">
     <h2 class="heading"><%= @articles[0].title %></h2>
     <p><%= truncate(ActionView::Base.full_sanitizer.sanitize(@articles[0].text.html_safe), length: 90) %></p>
-    <p>omfg noooo</p>
     <footer><%= link_to "Read latest in #{@articles[0].category} &raquo;".html_safe, article_path(@articles[0]), :class => "btn medium" %></footer>
   </article>
   <div class="clear"></div>
