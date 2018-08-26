@@ -6,7 +6,7 @@
         <h2 class="font-x2"><%= @latest_articles[0].title %></h2>
         <p class="nospace btmspace-10 font-xs uppercase">Posted to <%= @latest_articles[0].category %> @ <%= local_date(@latest_articles[0].display_dttm) %></p>
       </header>
-      <p class="btmspace-30"><%= truncate(@latest_articles[0].text, length: 90) %></p>
+      <p class="btmspace-30"><%= truncate(ActionView::Base.full_sanitizer.sanitize(@latest_articles[0].text), length: 90) %></p>
       <footer><%= link_to "Read More &raquo;".html_safe, article_path(@latest_articles[0]), :class => "btn small" %></footer>
     </article>
 
@@ -17,13 +17,13 @@
             <article>
               <a href="#"><i><%= image_tag(getIconForArticleCategory(@latest_articles[1].category), :class => "fa", :alt => @latest_articles[1].category) %></i></a>
               <h6 class="heading"><%= @latest_articles[1].title %></h6>
-              <p><%= truncate(@latest_articles[1].text, length: 90) %></p>
+              <p><%= truncate(ActionView::Base.full_sanitizer.sanitize(@latest_articles[1].text), length: 90) %></p>
               <footer><%= link_to "Read More &raquo;".html_safe, article_path(@latest_articles[1])%></footer>
             </article>
           <% else %>
             <article><a href="#"><i class="fa fa-database"></i></a>
               <h6 class="heading">Mattis massa tellus eget</h6>
-              <p>Magna varius posuere sed porttitor orci ut velit feugiat facilisis nam vitae sem tempus nisi sodales luctus vel in ligula phasellus ullamcorper varius&hellip;</p>
+              <p>This is placeholder that should never be seen.</p>
               <footer><a href="#">Read More &raquo;</a></footer>
             </article>
           <% end %>
@@ -34,7 +34,7 @@
             <article>
               <a href="#"><i><%= image_tag(getIconForArticleCategory(@latest_articles[2].category), :class => "fa", :alt => @latest_articles[2].category) %></i></a>
               <h6 class="heading"><%= @latest_articles[2].title %></h6>
-              <p><%= truncate(@latest_articles[2].text, length: 90) %></p>
+              <p><%= truncate(ActionView::Base.full_sanitizer.sanitize(@latest_articles[2].text), length: 90) %></p>
               <footer><%= link_to "Read More &raquo;".html_safe, article_path(@latest_articles[2])%></footer>
             </article>
           <% else %>
@@ -51,7 +51,7 @@
             <article>
               <a href="#"><i><%= image_tag(getIconForArticleCategory(@latest_articles[3].category), :class => "fa", :alt => @latest_articles[3].category) %></i></a>
               <h6 class="heading"><%= @latest_articles[3].title %></h6>
-              <p><%= truncate(@latest_articles[3].text, length: 90) %></p>
+              <p><%= truncate(ActionView::Base.full_sanitizer.sanitize(@latest_articles[3].text), length: 90) %></p>
               <footer><%= link_to "Read More &raquo;".html_safe, article_path(@latest_articles[3])%></footer>
             </article>
           <% else %>
@@ -68,7 +68,7 @@
             <article>
               <a href="#"><i><%= image_tag(getIconForArticleCategory(@latest_articles[4].category), :class => "fa", :alt => @latest_articles[4].category) %></i></a>
               <h6 class="heading"><%= @latest_articles[4].title %></h6>
-              <p><%= truncate(@latest_articles[4].text, length: 90) %></p>
+              <p><%= truncate(ActionView::Base.full_sanitizer.sanitize(@latest_articles[4].text), length: 90) %></p>
               <footer><%= link_to "Read More &raquo;".html_safe, article_path(@latest_articles[4]) %></footer>
             </article>
           <% else %>

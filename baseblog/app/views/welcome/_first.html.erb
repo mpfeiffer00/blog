@@ -8,7 +8,7 @@
         <h2 class="font-x2"><%= @articles[0].title %></h2>
         <p class="nospace btmspace-10 font-xs uppercase">Posted to <%= @articles[0].category %> @ <%= local_date(@articles[0].display_dttm) %></p>
       </header>
-      <p class="btmspace-30"><%= truncate(@articles[0].text, length: 90) %></p>
+      <p class="btmspace-30">aw shit</p>
       <footer><%= link_to "Read More &raquo;".html_safe, article_path(@articles[0]), :class => "btn small" %></footer>
     </article>
 
@@ -17,28 +17,28 @@
         <li class="one_half first btmspace-30">
           <article><a href="#"><i class="fa fa-database"></i></a>
             <h6 class="heading"><%= @articles[1].title %></h6>
-            <p><%= truncate(@articles[1].text, length: 90) %></p>
+            <p><%= truncate(ActionView::Base.full_sanitizer.sanitize(@articles[1].text), length: 90) %></p>
             <footer><%= link_to "Read More &raquo;".html_safe, article_path(@articles[1])%></footer>
           </article>
         </li>
         <li class="one_half btmspace-30">
           <article><a href="#"><i class="fa fa-language"></i></a>
             <h6 class="heading"><%= @articles[2].title %></h6>
-            <p><%= truncate(@articles[2].text, length: 90) %></p>
+            <p><%= truncate(ActionView::Base.full_sanitizer.sanitize(@articles[2].text), length: 90) %></p>
             <footer><%= link_to "Read More &raquo;".html_safe, article_path(@articles[2])%></footer>
           </article>
         </li>
         <li class="one_half first">
           <article><a href="#"><i class="fa fa-lastfm"></i></a>
             <h6 class="heading"><%= @articles[3].title %></h6>
-            <p><%= truncate(@articles[3].text, length: 90) %></p>
+            <p><%= truncate(ActionView::Base.full_sanitizer.sanitize(@articles[3].text), length: 90) %></p>
             <footer><%= link_to "Read More &raquo;".html_safe, article_path(@articles[3])%></footer>
           </article>
         </li>
         <li class="one_half">
           <article><a href="#"><i class="fa fa-sliders"></i></a>
             <h6 class="heading"><%= @articles[4].title %></h6>
-            <p><%= truncate(@articles[4].text, length: 90) %></p>
+            <p><%= truncate(ActionView::Base.full_sanitizer.sanitize(@articles[4].text), length: 90) %></p>
             <footer><%= link_to "Read More &raquo;".html_safe, article_path(@articles[4]) %></footer>
           </article>
         </li>
