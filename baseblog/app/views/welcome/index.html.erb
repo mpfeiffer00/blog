@@ -67,26 +67,7 @@ Licence URI: http://www.os-templates.com/template-terms
 <!-- End Top Background Image Wrapper -->
 <!-- ################################################################################################ -->
 <!-- ################################################################################################ -->
-<div>
-  <table>
-    <tr>
-      <th>Title</th>
-      <th>Text</th>
-      <th>Category</th>
-      <th>Posted</th>
-    </tr>
 
-    <% @articles.each do |article| %>
-      <tr>
-        <td><%= link_to article.title, article_path(article) %></td>
-        <td><%= truncate(article.text, length: 60) %></td>
-        <td><%= article.category %></td>
-        <td><%= local_time(article.display_dttm) %></td>
-        <td><%= link_to 'Edit', edit_article_path(article) %></td>
-      </tr>
-    <% end %>
-  </table>
-</div>
 <!-- ################################################################################################ -->
 <%= render 'latest' %>
 <%= render 'second' %>
