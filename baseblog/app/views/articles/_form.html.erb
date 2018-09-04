@@ -16,43 +16,55 @@
   </p>
 
   <p>
-    <%= form.label :text %><br>
-    <%= form.text_area :text %>
-  </p>
-
-  <p>
     <%= form.select :category, Article::CATEGORY %>
   </p>
 
   <p>
-    <%= form.submit %>
+    <div id="toolbar-container"></div>
+    <div id="editor">
+        <textarea>placeholder</textarea>
+    </div>
+    <%= form.hidden_field :text, id: "articletext" %>
+  </p>
+
+
+  <p>
+    <%= form.submit :submit, id: "submit" %>
   </p>
 <% end %>
 
 <%= link_to 'Back', articles_path %>
 
-
 <head>
   <meta charset="utf-8">
-
-  <!-- Include external CSS. -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.25.0/codemirror.min.css">
-
-  <!-- Include Editor style. -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.8.1/css/froala_editor.pkgd.min.css" rel="stylesheet" type="text/css" />
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.8.1/css/froala_style.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.ckeditor.com/ckeditor5/11.0.1/decoupled-document/ckeditor.js"></script>
 </head>
 
 <body>
-  <!-- Include external JS libs. -->
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.25.0/codemirror.min.js"></script>
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.25.0/mode/xml/xml.min.js"></script>
+    <!-- The toolbar will be rendered in this container. -->
 
-  <!-- Include Editor JS files. -->
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.8.1/js/froala_editor.pkgd.min.js"></script>
 
-  <!-- Initialize the editor. -->
-  <script> $(function() { $('textarea').froalaEditor() }); </script>
+    <!-- This container will become the editable. -->
+
+
+    <script>
+        let editorz;
+
+        DecoupledEditor
+            .create( document.querySelector( '#editor' ) )
+            .then( editor => {
+              const toolbarContainer = document.querySelector( '#toolbar-container' );
+
+              toolbarContainer.appendChild( editor.ui.view.toolbar.element );
+              editorz = editor
+            } )
+            .catch( error => {
+              console.error( error );
+            } );
+            // https://ckeditor.com/docs/ckeditor5/latest/builds/guides/integration/saving-data.html
+            document.querySelector( '#submit' ).addEventListener( 'click', () => {
+                const editorData = editorz.getData();
+                document.getElementById("articletext").value = editorData
+            } );
+    </script>
 </body>

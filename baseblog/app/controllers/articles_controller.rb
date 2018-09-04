@@ -12,6 +12,7 @@ class ArticlesController < ApplicationController
   end
 
   def create
+    upload_image
     @article = Article.new(article_params)
 
     if @article.save
@@ -33,6 +34,18 @@ class ArticlesController < ApplicationController
     else
       render 'edit'
     end
+  end
+
+  def pictures
+    puts "ARICLE CONTROLLER PICTURES HOLY SHIT"
+  end
+
+  def upload_image
+
+  end
+
+  def upload_file
+
   end
 
   private

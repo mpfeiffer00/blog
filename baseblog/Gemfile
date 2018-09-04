@@ -58,5 +58,5 @@ gem 'jquery-rails'
 # https://github.com/bokmann/font-awesome-rails
 gem "font-awesome-rails" # Need 4.4.0+ for WYSIWYG
 gem 'simple_form'
-# https://github.com/froala/wysiwyg-rails
-gem "wysiwyg-rails"
+#
+gem 'webpacker', '~> 3.5'

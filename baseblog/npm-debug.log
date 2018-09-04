@@ -1,0 +1,258 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/bin/nodejs',
+1 verbose cli   '/usr/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   '-g',
+1 verbose cli   'nsudo',
+1 verbose cli   'n',
+1 verbose cli   'stable' ]
+2 info using npm@1.3.10
+3 info using node@v0.10.25
+4 verbose cache add [ 'nsudo', null ]
+5 verbose cache add name=undefined spec="nsudo" args=["nsudo",null]
+6 verbose parsed url { protocol: null,
+6 verbose parsed url   slashes: null,
+6 verbose parsed url   auth: null,
+6 verbose parsed url   host: null,
+6 verbose parsed url   port: null,
+6 verbose parsed url   hostname: null,
+6 verbose parsed url   hash: null,
+6 verbose parsed url   search: null,
+6 verbose parsed url   query: null,
+6 verbose parsed url   pathname: 'nsudo',
+6 verbose parsed url   path: 'nsudo',
+6 verbose parsed url   href: 'nsudo' }
+7 verbose cache add [ 'n', null ]
+8 verbose cache add name=undefined spec="n" args=["n",null]
+9 verbose parsed url { protocol: null,
+9 verbose parsed url   slashes: null,
+9 verbose parsed url   auth: null,
+9 verbose parsed url   host: null,
+9 verbose parsed url   port: null,
+9 verbose parsed url   hostname: null,
+9 verbose parsed url   hash: null,
+9 verbose parsed url   search: null,
+9 verbose parsed url   query: null,
+9 verbose parsed url   pathname: 'n',
+9 verbose parsed url   path: 'n',
+9 verbose parsed url   href: 'n' }
+10 verbose cache add [ 'stable', null ]
+11 verbose cache add name=undefined spec="stable" args=["stable",null]
+12 verbose parsed url { protocol: null,
+12 verbose parsed url   slashes: null,
+12 verbose parsed url   auth: null,
+12 verbose parsed url   host: null,
+12 verbose parsed url   port: null,
+12 verbose parsed url   hostname: null,
+12 verbose parsed url   hash: null,
+12 verbose parsed url   search: null,
+12 verbose parsed url   query: null,
+12 verbose parsed url   pathname: 'stable',
+12 verbose parsed url   path: 'stable',
+12 verbose parsed url   href: 'stable' }
+13 silly lockFile 1614b95a-nsudo nsudo
+14 verbose lock nsudo /home/vagrant/.npm/1614b95a-nsudo.lock
+15 silly lockFile d1854cae-n n
+16 verbose lock n /home/vagrant/.npm/d1854cae-n.lock
+17 silly lockFile 4fbacc2f-stable stable
+18 verbose lock stable /home/vagrant/.npm/4fbacc2f-stable.lock
+19 silly lockFile 1614b95a-nsudo nsudo
+20 silly lockFile 1614b95a-nsudo nsudo
+21 silly lockFile d1854cae-n n
+22 silly lockFile d1854cae-n n
+23 silly lockFile 4fbacc2f-stable stable
+24 silly lockFile 4fbacc2f-stable stable
+25 verbose addNamed [ 'nsudo', '' ]
+26 verbose addNamed [ null, '*' ]
+27 silly lockFile a0dad124-nsudo nsudo@
+28 verbose lock nsudo@ /home/vagrant/.npm/a0dad124-nsudo.lock
+29 verbose addNamed [ 'n', '' ]
+30 verbose addNamed [ null, '*' ]
+31 silly lockFile 6b58d7dc-n n@
+32 verbose lock n@ /home/vagrant/.npm/6b58d7dc-n.lock
+33 verbose addNamed [ 'stable', '' ]
+34 verbose addNamed [ null, '*' ]
+35 silly lockFile 026aa5b0-stable stable@
+36 verbose lock stable@ /home/vagrant/.npm/026aa5b0-stable.lock
+37 silly addNameRange { name: 'nsudo', range: '*', hasData: false }
+38 silly addNameRange { name: 'n', range: '*', hasData: false }
+39 silly addNameRange { name: 'stable', range: '*', hasData: false }
+40 verbose url raw nsudo
+41 verbose url resolving [ 'https://registry.npmjs.org/', './nsudo' ]
+42 verbose url resolved https://registry.npmjs.org/nsudo
+43 info trying registry request attempt 1 at 22:50:44
+44 http GET https://registry.npmjs.org/nsudo
+45 verbose url raw stable
+46 verbose url resolving [ 'https://registry.npmjs.org/', './stable' ]
+47 verbose url resolved https://registry.npmjs.org/stable
+48 info trying registry request attempt 1 at 22:50:44
+49 http GET https://registry.npmjs.org/stable
+50 verbose url raw n
+51 verbose url resolving [ 'https://registry.npmjs.org/', './n' ]
+52 verbose url resolved https://registry.npmjs.org/n
+53 info trying registry request attempt 1 at 22:50:44
+54 verbose etag "794fec4ca3d45c86a55b552d4a0e3ec8"
+55 http GET https://registry.npmjs.org/n
+56 http 200 https://registry.npmjs.org/stable
+57 silly registry.get cb [ 200,
+57 silly registry.get   { date: 'Mon, 03 Sep 2018 22:50:42 GMT',
+57 silly registry.get     'content-type': 'application/json; charset=UTF-8',
+57 silly registry.get     'content-length': '15198',
+57 silly registry.get     connection: 'keep-alive',
+57 silly registry.get     'set-cookie': [ '__cfduid=d2bd066e4ab23ff9dbdf9abc15815747f1536015042; expires=Tue, 03-Sep-19 22:50:42 GMT; path=/; domain=.registry.npmjs.org; HttpOnly' ],
+57 silly registry.get     'cf-cache-status': 'HIT',
+57 silly registry.get     'cache-control': 'max-age=300',
+57 silly registry.get     'accept-ranges': 'bytes',
+57 silly registry.get     'cf-ray': '454bc6dcc96a9b2c-DFW',
+57 silly registry.get     etag: '"3cfe4569de942571eefe249fa13d01d2"',
+57 silly registry.get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+57 silly registry.get     'last-modified': 'Sun, 27 May 2018 18:08:59 GMT',
+57 silly registry.get     vary: 'accept-encoding, accept',
+57 silly registry.get     server: 'cloudflare' } ]
+58 http 304 https://registry.npmjs.org/n
+59 silly registry.get cb [ 304,
+59 silly registry.get   { date: 'Mon, 03 Sep 2018 22:50:42 GMT',
+59 silly registry.get     connection: 'keep-alive',
+59 silly registry.get     'set-cookie': [ '__cfduid=de01b38bd11499a6824169199e767e9721536015042; expires=Tue, 03-Sep-19 22:50:42 GMT; path=/; domain=.registry.npmjs.org; HttpOnly' ],
+59 silly registry.get     'cf-cache-status': 'HIT',
+59 silly registry.get     'cache-control': 'max-age=300',
+59 silly registry.get     'cf-ray': '454bc6dcef49587f-DFW',
+59 silly registry.get     etag: '"794fec4ca3d45c86a55b552d4a0e3ec8"',
+59 silly registry.get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+59 silly registry.get     'last-modified': 'Fri, 03 Aug 2018 00:36:01 GMT',
+59 silly registry.get     vary: 'accept-encoding, accept',
+59 silly registry.get     server: 'cloudflare' } ]
+60 verbose etag n from cache
+61 silly addNameRange number 2 { name: 'n', range: '*', hasData: true }
+62 silly addNameRange versions [ 'n',
+62 silly addNameRange   [ '0.0.1',
+62 silly addNameRange     '0.0.2',
+62 silly addNameRange     '0.0.3',
+62 silly addNameRange     '0.0.4',
+62 silly addNameRange     '0.1.0',
+62 silly addNameRange     '0.1.1',
+62 silly addNameRange     '0.1.2',
+62 silly addNameRange     '0.2.0',
+62 silly addNameRange     '0.2.1',
+62 silly addNameRange     '0.2.2',
+62 silly addNameRange     '0.3.0',
+62 silly addNameRange     '0.4.0',
+62 silly addNameRange     '0.4.1',
+62 silly addNameRange     '0.4.2',
+62 silly addNameRange     '0.5.0',
+62 silly addNameRange     '0.5.1',
+62 silly addNameRange     '0.5.2',
+62 silly addNameRange     '0.5.3',
+62 silly addNameRange     '0.5.4',
+62 silly addNameRange     '0.6.0',
+62 silly addNameRange     '0.6.1',
+62 silly addNameRange     '0.7.0',
+62 silly addNameRange     '0.7.1',
+62 silly addNameRange     '0.7.2',
+62 silly addNameRange     '0.7.3',
+62 silly addNameRange     '0.8.0',
+62 silly addNameRange     '0.8.1',
+62 silly addNameRange     '0.8.2',
+62 silly addNameRange     '0.9.0',
+62 silly addNameRange     '0.9.1',
+62 silly addNameRange     '0.9.2',
+62 silly addNameRange     '0.9.3',
+62 silly addNameRange     '1.0.0',
+62 silly addNameRange     '1.1.0',
+62 silly addNameRange     '1.2.1',
+62 silly addNameRange     '1.2.2',
+62 silly addNameRange     '1.2.3',
+62 silly addNameRange     '1.2.4',
+62 silly addNameRange     '1.2.5',
+62 silly addNameRange     '1.2.6',
+62 silly addNameRange     '1.2.7',
+62 silly addNameRange     '1.2.8',
+62 silly addNameRange     '1.2.9',
+62 silly addNameRange     '1.2.11',
+62 silly addNameRange     '1.2.13',
+62 silly addNameRange     '1.2.14',
+62 silly addNameRange     '1.3.0',
+62 silly addNameRange     '1.4.0',
+62 silly addNameRange     '2.0.0',
+62 silly addNameRange     '1.4.1',
+62 silly addNameRange     '2.0.1',
+62 silly addNameRange     '1.4.2',
+62 silly addNameRange     '2.0.2',
+62 silly addNameRange     '2.1.0',
+62 silly addNameRange     '2.1.1',
+62 silly addNameRange     '2.1.2',
+62 silly addNameRange     '2.1.3',
+62 silly addNameRange     '2.1.4',
+62 silly addNameRange     '2.1.5',
+62 silly addNameRange     '2.1.6',
+62 silly addNameRange     '2.1.7',
+62 silly addNameRange     '2.1.8',
+62 silly addNameRange     '2.1.9',
+62 silly addNameRange     '2.1.10',
+62 silly addNameRange     '2.1.11',
+62 silly addNameRange     '2.1.12' ] ]
+63 verbose addNamed [ 'n', '2.1.12' ]
+64 verbose addNamed [ '2.1.12', '2.1.12' ]
+65 silly lockFile eef8e28b-n-2-1-12 n@2.1.12
+66 verbose lock n@2.1.12 /home/vagrant/.npm/eef8e28b-n-2-1-12.lock
+67 silly addNameRange number 2 { name: 'stable', range: '*', hasData: true }
+68 silly addNameRange versions [ 'stable',
+68 silly addNameRange   [ '0.1.0',
+68 silly addNameRange     '0.1.1',
+68 silly addNameRange     '0.1.2',
+68 silly addNameRange     '0.1.3',
+68 silly addNameRange     '0.1.4',
+68 silly addNameRange     '0.1.5',
+68 silly addNameRange     '0.1.6',
+68 silly addNameRange     '0.1.7',
+68 silly addNameRange     '0.1.8' ] ]
+69 verbose addNamed [ 'stable', '0.1.8' ]
+70 verbose addNamed [ '0.1.8', '0.1.8' ]
+71 silly lockFile e964270a-stable-0-1-8 stable@0.1.8
+72 verbose lock stable@0.1.8 /home/vagrant/.npm/e964270a-stable-0-1-8.lock
+73 silly lockFile 46d7a55f-pmjs-org-stable-stable-0-1-8-tgz https://registry.npmjs.org/stable/-/stable-0.1.8.tgz
+74 verbose lock https://registry.npmjs.org/stable/-/stable-0.1.8.tgz /home/vagrant/.npm/46d7a55f-pmjs-org-stable-stable-0-1-8-tgz.lock
+75 verbose addRemoteTarball [ 'https://registry.npmjs.org/stable/-/stable-0.1.8.tgz',
+75 verbose addRemoteTarball   '836eb3c8382fe2936feaf544631017ce7d47a3cf' ]
+76 info retry fetch attempt 1 at 22:50:44
+77 verbose fetch to= /home/vagrant/tmp/npm-27114-eMploXOz/1536015044297-0.8260983750224113/tmp.tgz
+78 http GET https://registry.npmjs.org/stable/-/stable-0.1.8.tgz
+79 silly lockFile eef8e28b-n-2-1-12 n@2.1.12
+80 silly lockFile eef8e28b-n-2-1-12 n@2.1.12
+81 silly lockFile 6b58d7dc-n n@
+82 silly lockFile 6b58d7dc-n n@
+83 http 404 https://registry.npmjs.org/nsudo
+84 silly registry.get cb [ 404,
+84 silly registry.get   { date: 'Mon, 03 Sep 2018 22:50:42 GMT',
+84 silly registry.get     'content-type': 'application/json',
+84 silly registry.get     'content-length': '21',
+84 silly registry.get     connection: 'keep-alive',
+84 silly registry.get     'set-cookie': [ '__cfduid=da0f93228bd88b7335c22189927dc68691536015042; expires=Tue, 03-Sep-19 22:50:42 GMT; path=/; domain=.registry.npmjs.org; HttpOnly' ],
+84 silly registry.get     'cf-cache-status': 'MISS',
+84 silly registry.get     'cache-control': 'max-age=300',
+84 silly registry.get     'cf-ray': '454bc6dc9d079b0e-DFW',
+84 silly registry.get     'expect-ct': 'max-age=604800, report-uri="https://report-uri.cloudflare.com/cdn-cgi/beacon/expect-ct"',
+84 silly registry.get     vary: 'accept-encoding, accept',
+84 silly registry.get     server: 'cloudflare' } ]
+85 silly lockFile a0dad124-nsudo nsudo@
+86 silly lockFile a0dad124-nsudo nsudo@
+87 error Error: Not found : nsudo
+87 error     at RegClient.<anonymous> (/usr/share/npm/node_modules/npm-registry-client/lib/request.js:272:14)
+87 error     at Request.self.callback (/usr/lib/nodejs/request/index.js:148:22)
+87 error     at Request.EventEmitter.emit (events.js:98:17)
+87 error     at Request.<anonymous> (/usr/lib/nodejs/request/index.js:896:14)
+87 error     at Request.EventEmitter.emit (events.js:117:20)
+87 error     at IncomingMessage.<anonymous> (/usr/lib/nodejs/request/index.js:847:12)
+87 error     at IncomingMessage.EventEmitter.emit (events.js:117:20)
+87 error     at _stream_readable.js:920:16
+87 error     at process._tickCallback (node.js:415:13)
+88 error If you need help, you may report this log at:
+88 error     <http://github.com/isaacs/npm/issues>
+88 error or email it to:
+88 error     <npm-@googlegroups.com>
+89 error System Linux 3.13.0-137-generic
+90 error command "/usr/bin/nodejs" "/usr/bin/npm" "install" "-g" "nsudo" "n" "stable"
+91 error cwd /home/vagrant/blog/baseblog
+92 error node -v v0.10.25
+93 error npm -v 1.3.10
+94 verbose exit [ 1, true ]

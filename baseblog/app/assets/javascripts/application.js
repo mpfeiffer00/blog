@@ -12,7 +12,6 @@
 //
 //= require jquery3
 //= require jquery_ujs
-//= require froala_editor.min.js
 //
 //= require rails-ujs
 //= require turbolinks
