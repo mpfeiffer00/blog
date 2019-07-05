@@ -2,7 +2,21 @@
   "name": "baseblog",
   "private": true,
   "dependencies": {
-    "@ckeditor/ckeditor5-build-classic": "^11.0.1",
-    "ckeditor": "11.0.1"
-  }
+    "ckeditor5": "11.0.1"
+  },
+  "description": "This README would normally document whatever steps are necessary to get the application up and running.",
+  "version": "1.0.0",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "devDependencies": {
+    "webpack": "^4.35.2",
+    "webpack-dev-server": "^3.7.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
 }

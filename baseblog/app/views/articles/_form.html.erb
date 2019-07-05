@@ -36,25 +36,19 @@
 <%= link_to 'Back', articles_path %>
 
 <head>
-  <meta charset="utf-8">
-  <script src="https://cdn.ckeditor.com/ckeditor5/11.0.1/decoupled-document/ckeditor.js"></script>
+   <!-- <script src='file://../../../node_modules/@ckeditor/ckeditor5-build-classic-build/ckeditor.js'></script> -->
+   <!-- node_modules/@ckeditor/ckeditor5-build-classic-build/ckeditor.js -->
+   <!-- <%= javascript_include_tag('ckeditor.js') %> -->
+   <!-- <script src="https://cdn.ckeditor.com/ckeditor5/11.0.1/decoupled-document/ckeditor.js"></script> -->
 </head>
 
 <body>
-    <!-- The toolbar will be rendered in this container. -->
-
-
-    <!-- This container will become the editable. -->
-
-
     <script>
         let editorz;
-
         DecoupledEditor
             .create( document.querySelector( '#editor' ) )
             .then( editor => {
               const toolbarContainer = document.querySelector( '#toolbar-container' );
-
               toolbarContainer.appendChild( editor.ui.view.toolbar.element );
               editorz = editor
             } )

@@ -59,4 +59,8 @@ gem 'jquery-rails'
 gem "font-awesome-rails" # Need 4.4.0+ for WYSIWYG
 gem 'simple_form'
 #
-gem 'webpacker', '~> 3.5'
+gem 'webpacker', '~> 4.x'
+
+gem 'google-cloud-storage'
+gem 'oauth'
+gem 'rest-client'

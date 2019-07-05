@@ -15,3 +15,19 @@ git config --global color.ui true
 git config --global user.name "YOUR NAME"
 git config --global user.email "YOUR@EMAIL.com"
 ssh-keygen -t rsa -b 4096 -C "YOUR@EMAIL.com"
+
+# gcloud init
+https://cloud.google.com/sdk/docs/quickstart-debian-ubuntu
+export GOOGLE_APPLICATION_CREDENTIALS="[PATH]"
+
+# google storage for ckeditor5
+https://github.com/hutchgrant/ckeditor5-google-do
+
+# building
+bundle exec rails webpacker:install
+yarn add webpack webpack-dev-server --dev
+bundle exec rails webpacker:precompile
+bundle exec rails webpacker:compile
+
+# Starting rails
+rails s -b 0.0.0.0
